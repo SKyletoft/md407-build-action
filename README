@@ -1,0 +1,15 @@
+Just place this following file in .github/workflows/compile_check
+```
+on: push
+name: Compile Checker
+jobs:
+  lint:
+    name: Compile Checker
+    runs-on: ubuntu-latest
+    steps:
+    - name: Compile Checker
+      uses: skyletoft/md407-build-action@v1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MAKE_PATH: RELATIVE_PATH_TO_FOLDER_CONTAINING_THE_MAKEFILE
+```
