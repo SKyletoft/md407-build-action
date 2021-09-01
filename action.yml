@@ -1,0 +1,12 @@
+name: 'MD407 build checker'
+description: 'Checks that the project builds with no errors in both debug and release mode'
+author: 'skyletoft'
+inputs: 
+  myInput:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.myInput }}
