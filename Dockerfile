@@ -2,7 +2,7 @@ FROM ubuntu:hirsute
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y binutils-arm-none-eabi gcc-arm-none-eabi libstdc++-arm-none-eabi-newlib make git
+RUN apt-get update && apt-get install -y binutils-arm-none-eabi gcc-arm-none-eabi libstdc++-arm-none-eabi-newlib make git jq
 
 COPY entrypoint.sh /entrypoint.sh
 
