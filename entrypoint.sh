@@ -15,7 +15,7 @@ git fetch origin $BRANCH
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
-ORIGINAL_PWD=$eval(pwd)
+ORIGINAL_PWD=$(eval pwd)
 for makefile in $MAKE_PATH
 do
 echo $makefile
