@@ -15,8 +15,11 @@ git fetch origin $BRANCH
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
-cd $MAKE_PATH
-
+for path in $MAKE_PATH
+do
+cd $path
 make clean
 make build
 make build-release
+cd
+done
