@@ -15,6 +15,7 @@ git fetch origin $BRANCH
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
+ORIGINAL_PWD=$eval(pwd)
 for makefile in $MAKE_PATH
 do
 echo $makefile
@@ -22,5 +23,5 @@ cd $makefile
 make clean
 make build
 make build-release
-cd
+cd $ORIGINAL_PWD
 done
