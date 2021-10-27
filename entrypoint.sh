@@ -20,8 +20,6 @@ for makefile in $MAKE_PATH
 do
 echo $makefile
 cd $makefile
-make clean
-make build
-make build-release
+make
 cd $ORIGINAL_PWD
 done
